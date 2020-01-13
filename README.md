@@ -13,5 +13,3 @@
   ```bash
   $ npm install
   ```
-
-* 
