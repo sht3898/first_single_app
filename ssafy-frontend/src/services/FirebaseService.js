@@ -8,12 +8,12 @@ const PORTFOLIOS = 'portfolios'
 // Setup Firebase
 // Do change to your own firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyBjQXHHQuw1V5noAgY3-ElbXodJeyV9ki4",
-	authDomain: "p0201wm1.firebaseapp.com",
-	databaseURL: "https://p0201wm1.firebaseio.com",
-	projectId: "p0201wm1",
-	storageBucket: "p0201wm1.appspot.com"
-}
+	apiKey: "AIzaSyCiXnDfx1zDrmqKTFqs8qC2EJk9UsXO53g",
+	authDomain: "firstproject-eb20a.firebaseapp.com",
+	databaseURL: "https://firstproject-eb20a.firebaseio.com",
+	projectId: "firstproject-eb20a",
+	storageBucket: "firstproject-eb20a.appspot.com",
+  };
 firebase.initializeApp(firebaseConfig)
 
 const firestore = firebase.firestore()
