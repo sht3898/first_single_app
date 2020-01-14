@@ -27,7 +27,11 @@ export default {
 				.then((docSnapshots) => {
 					return docSnapshots.docs.map((doc) => {
 						let data = doc.data()
-						data.created_at = new Date(data.created_at.toDate())
+						// data.created_at = new Date(data.created_at.toDate())
+						var year = data.created_at.substr(0, 2)
+						var month = data.created_at.substr(2, 2)
+						var day = data.created_at.substr(4, 2)
+						data.created_at = new Date(year, month, day)
 						return data
 					})
 				})
@@ -47,7 +51,12 @@ export default {
 				.then((docSnapshots) => {					
 					return docSnapshots.docs.map((doc) => {
 						let data = doc.data()
-						data.created_at = new Date(data.created_at.toDate())
+						// data.created_at = new Date(data.created_at.toDate())
+						var year = data.created_at.substr(0, 2)
+						var month = data.created_at.substr(2, 2)
+						var day = data.created_at.substr(4, 2)
+						data.created_at = new Date(year, month, day)
+						console.log(data)
 						return data
 					})
 				})
