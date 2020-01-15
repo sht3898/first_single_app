@@ -1,7 +1,7 @@
 <template>
   <div>
     <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900" style="width:100%">
-      <div style="font-size:5vw; line-height:1.2em;" slot="text">We will find a way.<br> We always have.</div>
+      <div style="font-size:5vw; line-height:1.2em; text-align:center;" slot="text">후회하지 않는 삶을 살자</div>
     </ImgBanner>
     <v-container>
       <!-- About Me -->
@@ -12,7 +12,7 @@
             만들어져 있을겁니다! 모두 화이팅 하시고, 꼭 완성해서 좋은 평가 있길 바라겠습니다.</p>
         </v-flex>
         <v-flex xs4 d-none d-sm-flex>
-          <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5"/>
+          <v-img :src="getImgUrl('130dpi.jpg')" aspect-ratio="1.5"/>
         </v-flex>
       </v-layout>
 
