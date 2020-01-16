@@ -1,6 +1,30 @@
 <template>
     <div>
-        <v-navigation-drawer v-model="sidebar" app>
+        <v-toolbar dense>
+            <span class="hidden-sm-and-up">
+                <v-app-bar-nav-icon @click.stop ="drawer = !drawer">
+                    <v-icon>{{ "menu" }}</v-icon>
+                </v-app-bar-nav-icon>
+            </span>
+            
+            <v-toolbar-title>
+                <router-link to="/" tag="span" style="cursor: pointer">
+                    {{ appTitle }}
+                </router-link>
+            </v-toolbar-title>
+
+            <v-spacer></v-spacer>
+            <v-toolbar-items class="hidden-xs-only">
+                <v-btn text v-for="item in menuItems" :key="item.title" :to="item.path">
+                    <v-icon left dark>{{ item.icon }}</v-icon>
+                    {{ item.title }}
+                </v-btn>
+            </v-toolbar-items>
+        </v-toolbar>
+
+
+        <v-sheet style="position: relative;">
+        <v-navigation-drawer v-model="drawer" app >
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title">
@@ -21,29 +45,7 @@
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
-
-
-        <v-toolbar dense>
-            <span class="hidden-sm-and-up">
-                <v-app-bar-nav-icon @click="sidebar = !sidebar">
-                    <v-icon>{{ "menu" }}</v-icon>
-                </v-app-bar-nav-icon>
-            </span>
-            
-            <v-toolbar-title>
-                <router-link to="/" tag="span" style="cursor: pointer">
-                    {{ appTitle }}
-                </router-link>
-            </v-toolbar-title>
-
-            <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-xs-only">
-                <v-btn text v-for="item in menuItems" :key="item.title" :to="item.path">
-                    <v-icon left dark>{{ item.icon }}</v-icon>
-                    {{ item.title }}
-                </v-btn>
-            </v-toolbar-items>
-        </v-toolbar>
+        </v-sheet>
         </div>
 </template>
 
@@ -53,7 +55,7 @@ export default {
     data() {
         return {
             appTitle: "Hyuntaek's portfolio",
-			sidebar: false,
+			drawer: false,
 			menuItems: [
 				{ title: 'Portfolio', path: '/portfolio', icon: 'people'},
 				{ title: 'Post', path: '/post', icon: 'folder'},
@@ -61,6 +63,16 @@ export default {
 			]
 
         }
+    },
+    methods: {
+        stopSee() {
+            if (screen.width > 600) {
+                this.drawer = false
+            }
+        }
+    },
+    mounted: function() {
+        window.addEventListener('resize', this.stopSee)
     }
 }
 </script>

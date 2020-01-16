@@ -13,3 +13,23 @@
   ```bash
   $ npm install
   ```
+
+* npm 빌드
+
+  ```bash
+  $ npm run build
+  ```
+
+* firebase 초기화
+
+  ```bash
+  $ firebase init
+  ```
+
+* firebase 배포
+
+  ```bash
+  $ firebase deploy
+  ```
+
+  
