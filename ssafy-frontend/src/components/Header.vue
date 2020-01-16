@@ -29,6 +29,7 @@
                     <v-icon>{{ "menu" }}</v-icon>
                 </v-app-bar-nav-icon>
             </span>
+            
             <v-toolbar-title>
                 <router-link to="/" tag="span" style="cursor: pointer">
                     {{ appTitle }}
@@ -43,34 +44,23 @@
                 </v-btn>
             </v-toolbar-items>
         </v-toolbar>
-    </div>
+        </div>
 </template>
 
 <script>
-    export default {
-        name: 'Header',
-        data() {
-            return {
-                appTitle: "Hyuntaek's portfolio",
-                sidebar: false,
-                menuItems: [{
-                        title: 'Portfolio',
-                        path: '/portfolio',
-                        icon: 'people'
-                    },
-                    {
-                        title: 'Post',
-                        path: '/post',
-                        icon: 'folder'
-                    },
-                    {
-                        title: 'Login',
-                        path: '/login',
-                        icon: 'lock_open'
-                    }
-                ]
+export default {
+    name: 'Header',
+    data() {
+        return {
+            appTitle: "Hyuntaek's portfolio",
+			sidebar: false,
+			menuItems: [
+				{ title: 'Portfolio', path: '/portfolio', icon: 'people'},
+				{ title: 'Post', path: '/post', icon: 'folder'},
+				{ title: 'Login', path: '/login', icon: 'lock_open'}
+			]
 
-            }
         }
     }
+}
 </script>

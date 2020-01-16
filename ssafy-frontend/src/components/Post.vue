@@ -2,8 +2,8 @@
   <v-layout py-4 h-100>
     <v-flex row>
       <div class="caption">{{formatedDate}}</div>
-      <h2 class="color-333 headline font-weight-light">{{title}}</h2>
-      <p class="mb-1 color-666 font-weight-light subheading">{{body}}</p>
+      <h2 class="color-333 headline font-weight-light limittitle">{{title}}</h2>
+      <p class="mb-1 color-666 font-weight-light subheading limitbody">{{body}}</p>
     </v-flex>
   </v-layout>
 </template>
@@ -24,6 +24,27 @@ export default {
 }
 </script>
 <style>
+  .limittitle {
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    max-height: 4.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .limitbody{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    max-height: 4.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
   .color-666 {
     color: #666;
   }

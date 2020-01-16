@@ -56,7 +56,6 @@ export default {
 						var month = data.created_at.substr(2, 2)
 						var day = data.created_at.substr(4, 2)
 						data.created_at = new Date(year, month, day)
-						console.log(data)
 						return data
 					})
 				})
