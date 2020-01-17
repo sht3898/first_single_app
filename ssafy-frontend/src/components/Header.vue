@@ -24,7 +24,7 @@
 
 
         <v-sheet style="position: relative;">
-        <v-navigation-drawer v-model="drawer" app >
+        <v-navigation-drawer v-model="drawer" app disable-resize-watcher>
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title">
@@ -34,7 +34,7 @@
             </v-list-item>
             <v-divider></v-divider>
             <v-list dense nav>
-                <v-list-item v-for="item in menuItems" :key="item.title" :to="item.path" link>
+                <v-list-item v-for="item in sideItems" :key="item.title" :to="item.path" link>
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-item-icon>
@@ -60,7 +60,13 @@ export default {
 				{ title: 'Portfolio', path: '/portfolio', icon: 'people'},
 				{ title: 'Post', path: '/post', icon: 'folder'},
 				{ title: 'Login', path: '/login', icon: 'lock_open'}
-			]
+            ],
+            sideItems: [
+                { title: 'Home', path: '/', icon: 'home'},
+                { title: 'Portfolio', path: '/portfolio', icon: 'people'},
+				{ title: 'Post', path: '/post', icon: 'folder'},
+				{ title: 'Login', path: '/login', icon: 'lock_open'}
+            ]
 
         }
     },

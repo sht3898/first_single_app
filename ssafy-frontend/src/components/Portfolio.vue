@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-.limitporttitle {
+  .limitporttitle {
     font-family: sans-serif;
     font-size: 24px;
     line-height: 1.2;

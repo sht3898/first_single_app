@@ -27,7 +27,7 @@ export default {
 		Repository
 	},
 	mounted() {
-		this.getGitlabRepos('demo')
+		this.getGitlabRepos('sht3898')
 	},
 	methods: {
 		async getGitlabRepos(userName) {
